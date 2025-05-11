@@ -66,7 +66,7 @@ To get a simplistic view of our dataset, we can use the `pairs()` or (`pairs.pan
 You can zoom into the image to magnify the corelation values in the upper panel of the variable graph:
 
 
-<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/Yearly%20Earnings/Images/pairs-panels.png">
+<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/yearly-earnings/Images/pairs-panels.png">
 
 
 The variable `earnk` is perfectly correlated with the variable `earn`, so we have to remove that variable, as well as, `education` is perfectly correlated with `father_education` and `mother_education` **(high multicollinearity)**, so we will be removing those 2 variables as well. Even the variables `tense` and `angry`, we can drop any one of them because **high multicollinearity**.
@@ -138,7 +138,7 @@ I will be using `ggplot()` for aesthetic purposes.
   geom_smooth(method = "loess", se = FALSE, color = "navy", lwd = 1.5)
 ```
 
-<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/Yearly%20Earnings/Images/Fitted%20vs%20Residuals.png" align = "centre" height = "300" width = "600">
+<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/yearly-earnings/Images/Fitted%20vs%20Residuals.png" align = "centre" height = "300" width = "600">
 
 
 This is a `Fitted vs Residual` plot which tells us about linearity. 
@@ -156,7 +156,7 @@ All the points are spread across the plot without creating any pattern (which ha
 
 ```
 
-<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/Yearly%20Earnings/Images/Homoscedasticity.png" align = "centre" height = "300" width = "600">
+<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/yearly-earnings/Images/Homoscedasticity.png" align = "centre" height = "300" width = "600">
 
 
 
@@ -187,7 +187,7 @@ There is only 1 outlier, which isn’t influential `cooks.distance = 0.0142`.
   labs(title = "QQ Plot", x = "Theoretical", y = "Sample")
 ```
 
-<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/Yearly%20Earnings/Images/Normality%20-%20QQ%20Plot.png" align = "centre" height = "500" width = "450">
+<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/yearly-earnings/Images/Normality%20-%20QQ%20Plot.png" align = "centre" height = "500" width = "450">
 
 
 This is **QQ Plot**, and we can evaluate our 4th assumption of Normality. As you can see, it is not in a straight diagonal line, but has a bit of curvature. This could have happened due to some other extreme values, but otherwise, this looks good.
