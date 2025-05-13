@@ -10,37 +10,37 @@ lapply(packages, require, character.only = TRUE)
 # ===============================
 # 📂 2. Load Dataset
 # ===============================
-fires <- attach("firesD.csv")
-str(fires)
+attach (firesD)
+str(firesD)
 
 # ===============================
 # 🔧 3. Data Cleaning & Preprocessing
 # ===============================
 # Convert categorical variables to factors
-fires$month <- as.factor(fires$month)
-fires$day <- as.factor(fires$day)
-fires$rain <- as.factor(fires$rain)  # rain is a dummy: 1 = rain, 0 = no rain
+firesD$month <- as.factor(firesD$month)
+firesD$day <- as.factor(firesD$day)
+firesD$rain <- as.factor(firesD$rain)  # rain is a dummy: 1 = rain, 0 = no rain
 
 # Add a transformed response variable
-fires$log_area <- log(fires$area + 1)
+firesD$log_area <- log(firesD$area + 1)
 
 # ===============================
 # 📊 4. Exploratory Data Analysis
 # ===============================
-summary(fires)
-ggpairs(fires[, c("FFMC", "DMC", "DC", "ISI", "temp", "RH", "wind", "area")])
-hist(fires$area, breaks = 50, main = "Distribution of Burned Area", xlab = "Area (ha)")
-hist(fires$log_area, breaks = 50, main = "Distribution of Log(Area + 1)", xlab = "Log Area")
+summary(firesD)
+ggpairs(firesD[, c("FFMC", "DMC", "DC", "ISI", "temp", "RH", "wind", "area")])
+hist(firesD$area, breaks = 50, main = "Distribution of Burned Area", xlab = "Area (ha)")
+hist(firesD$log_area, breaks = 50, main = "Distribution of Log(Area + 1)", xlab = "Log Area")
 
 # ===============================
 # 📈 5. Model Building
 # ===============================
 # Base model
-model1 <- lm(log_area ~ FFMC + DMC + DC + ISI + temp + RH + wind + rain, data = fires)
+model1 <- lm(log_area ~ FFMC + DMC + DC + ISI + temp + RH + wind + rain, data = firesD)
 summary(model1)
 
 # Try polynomial terms to improve linearity
-model2 <- lm(log_area ~ poly(temp, 2) + poly(FFMC, 2) + DMC + DC + ISI + RH + wind + rain, data = fires)
+model2 <- lm(log_area ~ poly(temp, 2) + poly(FFMC, 2) + DMC + DC + ISI + RH + wind + rain, data = firesD)
 summary(model2)
 
 # ===============================
