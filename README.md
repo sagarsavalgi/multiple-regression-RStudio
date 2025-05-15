@@ -17,8 +17,7 @@ This repository contains data analysis projects using **Multiple Linear Regressi
 - Model diagnostics and prediction
 
 
-**File**: [FiresD.R](https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/forest-fire-prediction/Scripts/FiresD.R)
-**Analysis**:  [ooooooo](oooooooo)
+You can check out the .R script [here](https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/forest-fire-prediction/Scripts/FiresD.R) and the analysis [here](https://github.com/sagarsavalgi/multiple-regression-RStudio/tree/main/forest-fire-prediction/Analysis%20Description)
 
 ---
 
@@ -31,9 +30,7 @@ This repository contains data analysis projects using **Multiple Linear Regressi
 - Building and interpreting a linear model
 - Checking assumptions and diagnosing the model
 
-**File**:  [yearly-earnings.R](https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/yearly-earnings/Scripts/yearly-earnings_analysis.R)
-
-**Analysis**:  [Report](https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/yearly-earnings/Analysis%20Description/Report.md)
+You can check out the .R script [here](https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/yearly-earnings/Scripts/yearly-earnings_analysis.R) and the analysis [here](https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/yearly-earnings/Analysis%20Description/Report.md)
 
 ---
 
