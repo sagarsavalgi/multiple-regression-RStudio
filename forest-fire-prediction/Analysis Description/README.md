@@ -275,6 +275,8 @@ Finally, to detect overly influential observations:
 500 1.3725849 0.131711345 0.025935028
 ```
 
+<img src = "https://github.com/sagarsavalgi/multiple-regression-RStudio/blob/main/forest-fire-prediction/Images/Outlier%20and%20Influence.jpeg" height = "350" width = "700">
+
 A few observations, notably case **380**, show high leverage and Cook’s distance, indicating potential outliers. While these don't invalidate the model, they highlight the dataset's diversity and possible edge cases, perhaps from extremely large fires or sensor anomalies.
 
 ---
